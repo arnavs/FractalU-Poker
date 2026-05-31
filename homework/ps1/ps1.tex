@@ -1,0 +1,173 @@
+\documentclass[10pt, oneside]{amsart}
+\usepackage[bottom=1cm, right=1.5cm, left=1.5cm, top=1cm,includefoot]{geometry}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+% \usepackage[nottoc,numbib]{tocbibind}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{appendix}
+\usepackage{bbm}
+\usepackage[round]{natbib}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage[multiple]{footmisc}
+\usepackage{mathabx}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{sgame, tikz} % Game theory packages
+\usetikzlibrary{trees, calc} % For extensive form games
+%\usepackage{soul} % strikethourhg = \st
+\usepackage{mathtools}
+\let\underbrace\LaTeXunderbrace
+\let\overbrace\LaTeXoverbrace
+%%%Allows us to remove space before enumerate environment: [-,nosep]
+\usepackage[shortlabels]{enumitem}
+\usepackage{newpxtext}
+
+% \setlength{\topmargin}{-0.25in} \setlength{\textheight}{9in} %A4
+% \setlength{\oddsidemargin}{.1in} \setlength{\textwidth}{6.15in}
+
+%% Line spacing --- 1=1; 1.3 = 1.5-sp; 1.6=double-sp
+\linespread{1.3}
+
+%% Define some commands
+
+\newcommand{\indicator}[1]{\mathbbm{1}\left[ {#1} \right] }
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+\def\p{\noindent \textbf{Proof: }}
+\newcommand{\argmax}[1]{\underset{{#1}}{\arg\,\max\,}}
+\newcommand{\argmin}[1]{\underset{{#1}}{\arg\,\min\,}}
+\newcommand{\cav}{\text{cav }}
+\newcommand{\QED}{\hfill $\Box$\bigskip}
+\DeclareMathOperator{\tr}{tr}
+\mathtoolsset{showonlyrefs}
+\usepackage{empheq}
+
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\1}{\mathbbm{1}}
+% \usepackage{enumitem}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\pto}{\overset{p}{\to} }
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\hto}{\overset{h}{\to} }
+\newcommand{\BH}{\mathcal{H}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\BC}{\mathbb C}
+\newcommand{\BF}{\mathbb F}
+\newcommand{\supp}{\textup{supp }}
+\newcommand{\BQ}{\mathbb Q}
+\newcommand{\BZ}{\mathbb Z}
+\newcommand{\BK}{\mathbb K}
+\newcommand{\M}{\mathcal M}
+\newcommand{\A}{\mathcal A}
+\newcommand{\X}{\mathcal X}
+\newcommand{\mub}{\underline{\mu}}
+\newcommand{\niton}{\not\owns}
+\newcommand{\as}{\overset{\text{a.s.}}{\longrightarrow}}
+\newcommand{\weak}{\rightsquigarrow}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\skep}[1]{\textbf{\red #1}}
+
+%% Define indicator function
+\DeclareSymbolFont{bbold}{U}{bbold}{m}{n}
+\DeclareSymbolFontAlphabet{\mathbbold}{bbold}
+\newcommand{\cl}{\text{cl }}
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+
+%% Define some environments
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{assumption}{Assumption}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{claim}{Claim}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+% \newenvironment{proof}{\paragraph{Proof.}}{\hfill$\square$}
+\DeclareMathOperator*{\asto}{\overset{as}{\longrightarrow}}
+\DeclareMathOperator*{\dto}{\overset{d}{\leadsto}}
+
+\AfterEndEnvironment{proof}{\noindent\ignorespaces}
+\let\svthefootnote\thefootnote
+\newcommand\freefootnote[1]{%
+  \let\thefootnote\relax%
+  \footnotetext{#1}%
+  \let\thefootnote\svthefootnote%
+}
+\parskip3pt
+% \setlength\parindent{0pt}
+
+\usepackage{bm}
+
+%% Define some Colors
+
+\newcommand{\red}{\color{red}}
+\newcommand{\black}{\color{black}}
+\newcommand{\blue}{\color{blue}}
+%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\title{Computational and Behavioral Economics: Problem Set 1}
+\author{Arnav Sood}
+\thanks{Fractal University, Winter 2026}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+This is due by the start of class next week (February 22, 2026.) You can submit your work as a single notebook via email (\texttt{arnavs@alumni.cmu.edu}). As a reminder, there won't be any grades, this is solely to practice the material.
+
+\subsection*{Problem 1: Preventing Segregation}
+
+Recall the Schelling model of racial segregation that we studied \href{https://julia.quantecon.org/multi_agent_models/schelling.html}{\blue here.} The baseline model converges to a (fairly segregated) steady state after a small number of iterations. Your task is to do the following: 
+
+\begin{enumerate}
+    \item Imagine a reasonable government or social policy (or just a new feature that the model doesn't capture) that might break this phenomenon. 
+    \item Modify the baseline code to account for this new feature, and show that it actually does prevent segregation. 
+\end{enumerate}
+
+When I say ``reasonable,'' I mean something that doesn't drastically change the core preference parameters of the agents in the model. For example, ``providing better education about antiracism'' (i.e., raising the moving threshold) would not be a good policy, because the people in the model are already far less racist than people in real life. And so changing their preference parameters even more would be unrealistic. 
+
+As written, the logic for who moves is mechanical (it only depends on the race distribution of people around me.) This might need to change to account for new features (e.g., if the government is subsidizing people who stay in diverse neighborhoods, then the moving logic needs to compare the value of moving to the value of staying.)
+
+This is pretty open-ended: it could involve stopping people from moving too far (e.g., if they have existing family tie, or don't want to go to the other side of the country), or having moving costs scale with distance, or preventing them from moving if they have close friends in their neighborhood (where ``close friendships'' form randomly with some probability.) 
+
+\subsection*{(Bonus) Problem 2: Financing a Minimum Wage} Recall the McCall model of unemployment that we studied \href{https://julia.quantecon.org/dynamic_programming/mccall_model.html}{\blue here.}
+
+Say that we change the model in the following way: 
+\begin{itemize}
+    \item For the first 10 periods, the unemployment benefit is some constant value (say $c$.)
+    \item After that, the unemployment trust fund runs out of money and the unemployment it is financed by a 5\% tax on the people who have decided to start working. That is, say that 10 people are working at day 11, and they earn wages $w_1, w_2, ..., w_{10}$. Then the total pool of unemployment dollars is $0.05 \cdot (w_1 + w_2 + ... + w_{10})$, and it is split evenly between everyone still unemployed.
+\end{itemize}
+
+This means the value of unemployment goes up the longer you wait (assuming other people are taking jobs.) Because there is more money split between fewer unemployed people.
+
+Can you introduce this twist to the model and try to code it up? [{\skep{I haven't done this either; I'll work on this myself between now and next class. It's very possible that this is too hard or is unclear; if it is just let me know.}}]
+
+\subsection*{Problem 3: Personal Project} One of the goals of the class is to work on a personal project. Try to do as much as you can of the following by the next class. [\skep{This is a lot, so even if you only do steps 1 and 2, that's still great progress.}]
+\begin{enumerate}
+    \item Identify broadly the question you have in mind. It should be an economic or social phenomenon that you find interesting.
+    \item Find one or two papers, blog posts, data sets, studies, etc. describing it. Ideally one ``macro'' and one ``micro'' --- that is, one that describes generally what happens, and one that tries to explain why in an agent-based way. 
+    \subitem For example, if your topic was racial segregation, your ``macro'' data might be maps of neighborhoods by racial composition (showing that segregation occurs.) And your ``micro'' data might be interviews or surveys explaining what people's preferences are. 
+    \item Try to implement a \textbf{simple} agent-based coding model where you have people (agents), who behave similarly to what the ``micro'' data says, and see if it spits out the macro patterns you observed.
+\end{enumerate}
+
+\end{document}

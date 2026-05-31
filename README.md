@@ -1,0 +1,63 @@
+# FractalU: Computational and Behavioral Economics
+
+I'm teaching a class on _computational, behavioral economics_. Details are below; signup link is [here](https://forms.gle/F3YGmLwnjdBgawUx6).
+
+My bio: [Arnav Sood](https://arnavsood.com). I'm a 5th year Econ PhD student at [Carnegie Mellon](https://www.cmu.edu) and former open-source econ developer at [QuantEcon](https://quantecon.org). My thesis is on learning and deception involving "behavioral" (not strictly rational) economic agents.
+
+tl/dr
+  - **Time**: Sundays 2:00-4:00PM. 
+  - **Class**: Learn behavioral economics using math and code. Model and code up an economic/social situation you're interested in. 
+  - **Duration**: 6 weeks, from 1.25.26 to 3.8.26 (skipping 2.15.26)
+  - **Location**: 99 Hudson St., Jersey City (right across from WTC on PATH), **or remote, if you need**
+    - you can use the building amenities (coworking space, gym, pool, etc.) as long as I'm around
+  - **Cost**: $120 (scholarship), $210 (standard), $300 (supporter). Send me an email at [`arnavs@alumni.cmu.edu`](mailto:arnavs@alumni.cmu.edu) if none of these work.
+
+### Summary 
+
+Over 6 weeks, we're going to use modern machinery (math and code) to explore behavioral economics. By the end, you'll have written a small interactive paper[^1] where you apply these tools to a problem you're interested in. 
+
+"Economics" means that people are trying to maximize something, subject to some constraint. It may sound rigid (and we'll explore the limits), but this framework is already very permissive. People could be deciding: 
+  * Whether or not to accept a job (or spouse), or wait for a better one tomorrow. 
+  * How much lying they can get away with before reputation effects kick in and punish them. 
+  * If it's best to follow the crowd, or act on their own beliefs. 
+  * Whether they're comfortable living in a given neighborhood, or if they should move.
+
+"Behavioral" means that people are not the [precisely rational creatures](https://en.wikipedia.org/wiki/Homo_economicus) required by neoclassical theory. They might make mistakes when carrying out their plans. They might process information imperfectly (we'll discuss what that means), or they might face hard limits on the amount of information they can handle. 
+
+An increasingly large part of modern economics is realizing that these "behavioral frictions" aren't just small annoyances that we can model away. In many cases they lead to startlingly different behavior. 
+
+But we can't see clearly what that behavior is by sticking to the "literary" economics of (say) Keynes. We need to model people mathematically, and then implement our models on a computer.  
+
+### Requirements
+
+You should have **some familiarity** with coding (but you don't need to work as a software engineer or have majored in CS, for example.) Experience with math/stats and git/commandline is a plus, but not a requirement. **No prior economics experience is required**. 
+
+You should be willing to learn and work hard. The course is fast-paced, and you'll get out what you put in. 
+
+### Class Format 
+
+Each class will be 1.5 hours of new material, followed by at least 0.5 hours of coworking and "office hours." (There's no hard stop after 0.5 hours.) We'll usually present the "standard model" of the topic first, and then the version with more realistic/complex behavior. 
+
+Office hours are a good time to get help from me (and other students) on your individual projects. 
+
+There will be homework, but no grades. 
+
+Once everyone is registered, I'll add you all to this repo and make it private. The GitHub will be our main digital space/sandbox. 
+
+After the class is over, anyone who wants to can remove their material or interim products, and I'll make it public again. 
+
+### Syllabus 
+
+Exact topics and order subject to change. **Don't worry if stuff in links seems too advanced**; it's just a reference.
+
+| Class | Topic | Details and "Standard Model" | Alternatives
+| -------- | ------- | ------- | ------- | 
+| Week 1 (1.25.26) | Setup and tooling. Intro to Julia language. Math refresher. | N/A | N/A
+| Week 2 (2.1.26) | Bayes, Nash, and beyond | What is rationality? Implications of Bayesian rationality. Writing a game formally and defining Nash equilibrium. | Cognitive distortions. Trembles.
+| Week 3 (2.8.26) | Dynamical systems and racial discrimination | [Schelling Segregation Model](https://julia.quantecon.org/multi_agent_models/schelling.html). | Sparse Max. 
+| Week 4 (2.22.26)| Herds and learning from the crowd | Social learning with perfect recall and Bayesian agents. | Versions with bounded memory, deviant agents (overconfident, conformist, malicious), etc. 
+| Week 5 (3.1.26) | Optimal stopping | [McCall search model](https://julia.quantecon.org/dynamic_programming/mccall_model.html). | Recency bias and imperfect recall. 
+| Week 6 (3.8.26) | Persuasion, communication, and lying | Defining lying mathematically. Bayesian persuasion and cheap talk. | **My own research ("frequentist persuasion.'')** Hard limits on info processing and precision of communication. 
+| Date TBD | N/A | N/A | **Project demos! People can share their projects and let your classmates interact with them.**
+
+[^1]: A bit on [what this means](https://paulromer.net/jupyter-mathematica-and-the-future-of-the-research-paper/), and an [example](https://github.com/QuantEcon/notebook-gallery/blob/main/ipynb/john_stachurski-coase.ipynb).
