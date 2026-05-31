@@ -1,36 +1,30 @@
-# FractalU: Computational and Behavioral Economics
+# FractalU: Build a Poker AI Bot
 
-I'm teaching a class on _computational, behavioral economics_. Details are below; signup link is [here](https://forms.gle/F3YGmLwnjdBgawUx6).
+I'm teaching a class on building a Poker AI bot. Details are below; to signup send an email to [`arnavs@alumni.cmu.edu`](mailto:arnavs@alumni.cmu.edu).
 
-My bio: [Arnav Sood](https://arnavsood.com). I'm a 5th year Econ PhD student at [Carnegie Mellon](https://www.cmu.edu) and former open-source econ developer at [QuantEcon](https://quantecon.org). My thesis is on learning and deception involving "behavioral" (not strictly rational) economic agents.
+My bio: [Arnav Sood](https://arnavsood.com). I'm a 5th year Econ PhD student at [Carnegie Mellon](https://www.cmu.edu), a data scientist intern at [Revelio Labs](https://reveliolabs.com), and a former open-source econ developer at [QuantEcon](https://quantecon.org). My thesis is on learning and deception involving "behavioral" (not strictly rational) economic agents.
 
 tl/dr
   - **Time**: Sundays 2:00-4:00PM. 
-  - **Class**: Learn behavioral economics using math and code. Model and code up an economic/social situation you're interested in. 
-  - **Duration**: 6 weeks, from 1.25.26 to 3.8.26 (skipping 2.15.26)
+  - **Class**: Build a Poker AI Bot. 
+  - **Duration**: 6 weeks, from 7.5.26 to 8.9.26.
   - **Location**: 99 Hudson St., Jersey City (right across from WTC on PATH), **or remote, if you need**
     - you can use the building amenities (coworking space, gym, pool, etc.) as long as I'm around
   - **Cost**: $120 (scholarship), $210 (standard), $300 (supporter). Send me an email at [`arnavs@alumni.cmu.edu`](mailto:arnavs@alumni.cmu.edu) if none of these work.
 
 ### Summary 
 
-Over 6 weeks, we're going to use modern machinery (math and code) to explore behavioral economics. By the end, you'll have written a small interactive paper[^1] where you apply these tools to a problem you're interested in. 
+Over 6 weeks, we're going to build a bot to play a variant of poker. By the end, you'll have learned the underlying theory and have a functioning bot. After the class I'll test the bots against each other and give a prize to the top bots.
 
-"Economics" means that people are trying to maximize something, subject to some constraint. It may sound rigid (and we'll explore the limits), but this framework is already very permissive. People could be deciding: 
-  * Whether or not to accept a job (or spouse), or wait for a better one tomorrow. 
-  * How much lying they can get away with before reputation effects kick in and punish them. 
-  * If it's best to follow the crowd, or act on their own beliefs. 
-  * Whether they're comfortable living in a given neighborhood, or if they should move.
+Our variant is heads-up (1v1) with a reduced deck (27 cards, A-9 for 3 suits, where A can be either high or low). See the full rules [here](https://github.com/cmu-dsc/poker-engine-2026/blob/main/docs/rules.md). The twist is that instead of normal poker, each player gets **five** cards preflop, at which point they discard 3 and show it to the other person. You can use whatever approach you want (i.e., game theory, reinforcement learning, etc.)
 
-"Behavioral" means that people are not the [precisely rational creatures](https://en.wikipedia.org/wiki/Homo_economicus) required by neoclassical theory. They might make mistakes when carrying out their plans. They might process information imperfectly (we'll discuss what that means), or they might face hard limits on the amount of information they can handle. 
+If none of that makes sense: it's okay! I'm not assuming any poker knowledge. The first class is going to be about the basics of the game, but you can already see the basic strategic decisions (I discard cards to make my best hand, but what I discard tells my opponent about what I have, etc.)
 
-An increasingly large part of modern economics is realizing that these "behavioral frictions" aren't just small annoyances that we can model away. In many cases they lead to startlingly different behavior. 
-
-But we can't see clearly what that behavior is by sticking to the "literary" economics of (say) Keynes. We need to model people mathematically, and then implement our models on a computer.  
+What makes poker different from chess is the role of ``higher order beliefs.'' Unlike chess, there's private information. And what matters is what I have, what I think about you have, what you think about what I have, what I think about what you think I have, etc. And the signaling about these things is the heart of the game. 
 
 ### Requirements
 
-You should have **some familiarity** with coding (but you don't need to work as a software engineer or have majored in CS, for example.) Experience with math/stats and git/commandline is a plus, but not a requirement. **No prior economics experience is required**. 
+You should have **some familiarity** with Python coding (but you don't need to work as a software engineer or have majored in CS, for example.) Experience with math/stats/econ and git/commandline is a plus, but not a requirement. **No prior poker experience is required**. 
 
 You should be willing to learn and work hard. The course is fast-paced, and you'll get out what you put in. 
 
@@ -50,14 +44,14 @@ After the class is over, anyone who wants to can remove their material or interi
 
 Exact topics and order subject to change. **Don't worry if stuff in links seems too advanced**; it's just a reference.
 
-| Class | Topic | Details and "Standard Model" | Alternatives
-| -------- | ------- | ------- | ------- | 
-| Week 1 (1.25.26) | Setup and tooling. Intro to Julia language. Math refresher. | N/A | N/A
-| Week 2 (2.1.26) | Bayes, Nash, and beyond | What is rationality? Implications of Bayesian rationality. Writing a game formally and defining Nash equilibrium. | Cognitive distortions. Trembles.
-| Week 3 (2.8.26) | Dynamical systems and racial discrimination | [Schelling Segregation Model](https://julia.quantecon.org/multi_agent_models/schelling.html). | Sparse Max. 
-| Week 4 (2.22.26)| Herds and learning from the crowd | Social learning with perfect recall and Bayesian agents. | Versions with bounded memory, deviant agents (overconfident, conformist, malicious), etc. 
-| Week 5 (3.1.26) | Optimal stopping | [McCall search model](https://julia.quantecon.org/dynamic_programming/mccall_model.html). | Recency bias and imperfect recall. 
-| Week 6 (3.8.26) | Persuasion, communication, and lying | Defining lying mathematically. Bayesian persuasion and cheap talk. | **My own research ("frequentist persuasion.'')** Hard limits on info processing and precision of communication. 
-| Date TBD | N/A | N/A | **Project demos! People can share their projects and let your classmates interact with them.**
+| Class | Topic | References |
+| -------- | ------- | ------- | 
+| Week 1 (7.5.26) | Rules of Poker, setup and tooling | N/A |
+| Week 2 (7.12.26) | Game Theory and Nash Equilibrium | Osborne & Rubinstein, *A Course in Game Theory* (Ch. 1–4); Zinkevich et al. (2007), "Regret Minimization in Games with Incomplete Information"; Shoham & Leyton-Brown, *Multiagent Systems* (Ch. 3–4) |
+| Week 3 (7.19.26) | Human Poker Strategies | Sklansky, *The Theory of Poker* (Ch. 1–5); Chen & Ankenman, *The Mathematics of Poker*; Negreanu, *Hold'em Wisdom for All Players* |
+| Week 4 (7.26.26) | Statistics and Bayesian Learning | Billings et al. (2002), "The Challenge of Poker"; Gelman et al., *Bayesian Data Analysis* (relevant chapters) |
+| Week 5 (8.2.26) | Intro to Deep Learning | Nielsen, *Neural Networks and Deep Learning* (Ch. 1–2); Brown & Sandholm (2019), "Deep Counterfactual Regret Minimization" |
+| Week 6 (8.9.26) | Frontier ML Approaches | Brown & Sandholm (2018), "Superhuman AI for heads-up no-limit poker: Libratus"; Brown & Sandholm (2019), "Superhuman AI for multiplayer poker: Pluribus"; Heinrich & Silver (2016), "Deep Reinforcement Learning from Self-Play in Imperfect-Information Games"; Schmid et al. (2023), "Student of Games" |
+| Offline | Tournament | N/A |
 
-[^1]: A bit on [what this means](https://paulromer.net/jupyter-mathematica-and-the-future-of-the-research-paper/), and an [example](https://github.com/QuantEcon/notebook-gallery/blob/main/ipynb/john_stachurski-coase.ipynb).
+<!-- [^1]: A bit on [what this means](https://paulromer.net/jupyter-mathematica-and-the-future-of-the-research-paper/), and an [example](https://github.com/QuantEcon/notebook-gallery/blob/main/ipynb/john_stachurski-coase.ipynb). -->
