@@ -20,7 +20,7 @@ Our variant is heads-up (1v1) with a reduced deck (27 cards, A-9 for 3 suits, wh
 
 If none of that makes sense: it's okay! I'm not assuming any poker knowledge. The first class is going to be about the basics of the game, but you can already see the basic strategic decisions (I discard cards to make my best hand, but what I discard tells my opponent about what I have, etc.)
 
-What makes poker different from chess is the role of ``higher order beliefs.'' Unlike chess, there's private information. And what matters is what I have, what I think about you have, what you think about what I have, what I think about what you think I have, etc. And the signaling about these things is the heart of the game. 
+What makes poker different from chess is the role of "higher order beliefs." Unlike chess, there's private information. And what matters is what I have, what I think about you have, what you think about what I have, what I think about what you think I have, etc. And the signaling about these things is the heart of the game. 
 
 ### Requirements
 
@@ -30,7 +30,7 @@ You should be willing to learn and work hard. The course is fast-paced, and you'
 
 ### Class Format 
 
-Each class will be 1.5 hours of new material, followed by at least 0.5 hours of coworking and "office hours." (There's no hard stop after 0.5 hours.) We'll usually present the "standard model" of the topic first, and then the version with more realistic/complex behavior. 
+Each class will be 1.5 hours of new material, followed by at least 0.5 hours of coworking and "office hours." (There's no hard stop after 0.5 hours.) 
 
 Office hours are a good time to get help from me (and other students) on your individual projects. 
 
