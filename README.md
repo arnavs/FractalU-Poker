@@ -50,8 +50,8 @@ Exact topics and order subject to change. **Don't worry if stuff in links seems 
 | Week 2 (7.12.26) | Game Theory and Nash Equilibrium | Osborne & Rubinstein, *A Course in Game Theory* (Ch. 1–4); Zinkevich et al. (2007), "Regret Minimization in Games with Incomplete Information"; Shoham & Leyton-Brown, *Multiagent Systems* (Ch. 3–4) |
 | Week 3 (7.19.26) | Human Poker Strategies | Sklansky, *The Theory of Poker* (Ch. 1–5); Chen & Ankenman, *The Mathematics of Poker*; Negreanu, *Hold'em Wisdom for All Players* |
 | Week 4 (7.26.26) | Statistics and Bayesian Learning | Billings et al. (2002), "The Challenge of Poker"; Gelman et al., *Bayesian Data Analysis* (relevant chapters) |
-| Week 5 (8.2.26) | Intro to Deep Learning | Nielsen, *Neural Networks and Deep Learning* (Ch. 1–2); Brown & Sandholm (2019), "Deep Counterfactual Regret Minimization" |
-| Week 6 (8.9.26) | Frontier ML Approaches | Brown & Sandholm (2018), "Superhuman AI for heads-up no-limit poker: Libratus"; Brown & Sandholm (2019), "Superhuman AI for multiplayer poker: Pluribus"; Heinrich & Silver (2016), "Deep Reinforcement Learning from Self-Play in Imperfect-Information Games"; Schmid et al. (2023), "Student of Games" |
+| Week 5 (8.2.26) | ML Approaches | Nielsen, *Neural Networks and Deep Learning* (Ch. 1–2); Brown & Sandholm (2019), "Deep Counterfactual Regret Minimization" |
+| Remote: Week 6 (8.9.26) | Frontier ML Approaches | Brown & Sandholm (2018), "Superhuman AI for heads-up no-limit poker: Libratus"; Brown & Sandholm (2019), "Superhuman AI for multiplayer poker: Pluribus"; Heinrich & Silver (2016), "Deep Reinforcement Learning from Self-Play in Imperfect-Information Games"; Schmid et al. (2023), "Student of Games" |
 | Offline | Tournament | N/A |
 
 <!-- [^1]: A bit on [what this means](https://paulromer.net/jupyter-mathematica-and-the-future-of-the-research-paper/), and an [example](https://github.com/QuantEcon/notebook-gallery/blob/main/ipynb/john_stachurski-coase.ipynb). -->
