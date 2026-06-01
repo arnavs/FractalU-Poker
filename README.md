@@ -1,6 +1,6 @@
 # FractalU: Build a Poker AI Bot
 
-I'm teaching a class on building a Poker AI bot. Details are below; to signup send an email to [`arnavs@alumni.cmu.edu`](mailto:arnavs@alumni.cmu.edu).
+I'm teaching a class on building a Poker AI bot. Details are below; to signup fill out the [application](https://forms.gle/gpqtBXS3c3BSCexg8).
 
 My bio: [Arnav Sood](https://arnavsood.com). I'm a 5th year Econ PhD student at [Carnegie Mellon](https://www.cmu.edu), a data scientist intern at [Revelio Labs](https://reveliolabs.com), and a former open-source econ developer at [QuantEcon](https://quantecon.org). My thesis is on learning and deception involving "behavioral" (not strictly rational) economic agents.
 
