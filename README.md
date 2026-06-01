@@ -10,7 +10,7 @@ tl/dr
   - **Duration**: 6 weeks, from 7.5.26 to 8.9.26.
   - **Location**: 99 Hudson St., Jersey City (right across from WTC on PATH), **or remote, if you need**
     - you can use the building amenities (coworking space, gym, pool, etc.) as long as I'm around
-  - **Cost**: $120 (scholarship), $210 (standard), $300 (supporter). Send me an email at [`arnavs@alumni.cmu.edu`](mailto:arnavs@alumni.cmu.edu) if none of these work.
+  - **Cost**: $140 (scholarship), $230 (standard), $320 (supporter). Send me an email at [`arnavs@alumni.cmu.edu`](mailto:arnavs@alumni.cmu.edu) if none of these work.
 
 ### Summary 
 
